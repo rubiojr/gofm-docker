@@ -1,0 +1,4 @@
+#!/bin/sh
+set -e
+
+docker buildx build --build-arg VERSION=$(cat VERSION) --platform "linux/amd64,linux/arm64" . -t ghcr.io/rubiojr/gofm-docker:$(cat VERSION)
